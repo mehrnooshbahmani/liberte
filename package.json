@@ -18,7 +18,7 @@
   "scripts": {
     "liberte start": "webpack-dev-server",
     "liberte build": "webpack -w",
-    "liberte-config" : "node lib/liberte_config.ts"
+    "liberte-config": "node lib/liberte_config.ts"
   },
   "eslintConfig": {
     "extends": [
@@ -55,5 +55,29 @@
     "webpack": "^5.75.0",
     "webpack-cli": "^5.0.1",
     "webpack-dev-server": "^4.11.1"
-  }
+  },
+  "description": "Liberté is a react type script project has built with CRA and run with webpack dev server, so you can add your costum webpack config without \"react-script eject\".",
+  "main": "index.tsx",
+  "directories": {
+    "lib": "lib"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mehrnooshbahmani/liberte.git"
+  },
+  "keywords": [
+    "react",
+    "creat-react-app",
+    "cra",
+    "webpack",
+    "custom-webpack",
+    "react-scripts",
+    "woman-life-freedom"
+  ],
+  "author": "Mehrnoosh Bahmani",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mehrnooshbahmani/liberte/issues"
+  },
+  "homepage": "https://github.com/mehrnooshbahmani/liberte#readme"
 }

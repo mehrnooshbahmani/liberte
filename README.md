@@ -1,6 +1,6 @@
 # Liberté
 
-Liberté is a react type script project has built with CRA and run with webpack dev server, so you can add your costum webpack config without "react-script eject".
+Liberté is a react type script project built with CRA and runs with webpack dev server, so you can add your costum webpack config without "react-script eject".
 
 I named this package Liberte to express my protest against the prevailing conditions in Iran.
 Long live "Woman Life Freedom"
@@ -19,7 +19,7 @@ https://en.wikipedia.org/wiki/Mahsa_Amini_protests
 1.Install the latest version of the package from npm as a dev dependency:
 
 ```bash
-npm i -D @liberte/liberte
+npm i liberte
 ```
 2.Update the existing calls to react-scripts in the scripts section of your package.json to use the liberte CLI:
 
@@ -40,7 +40,7 @@ npm i -D @liberte/liberte
     ...}
 ```
 ## 🚀 About Me
-I'm a font end developer...
+I'm a front end developer...
 
 ## 🔗 Links
 [![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/mehrnoosh-bahmani-9a3290132/)
