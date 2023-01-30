@@ -19,7 +19,7 @@ https://en.wikipedia.org/wiki/Mahsa_Amini_protests
 1.Install the latest version of the package from npm as a dev dependency:
 
 ```bash
-npm i liberte
+npm i -D liberte
 ```
 2.Update the existing calls to react-scripts in the scripts section of your package.json to use the liberte CLI:
 
@@ -29,6 +29,7 @@ npm i liberte
 +  "start": "liberte start"
 -  "build": "react-scripts build"
 +  "build": "liberte build"
++  "liberte": "liberte-config"
 }
 ```
 3.Add this line to tsconfig.json
@@ -39,6 +40,11 @@ npm i liberte
     "outDir": "./dist/",
     ...}
 ```
+4.run this command in terminal
+```bash
+   npm run liberte
+```
+5.if you have webpack config from before, liberte keep your config as a comment, so you can uncomment yours and add them again
 ## 🚀 About Me
 I'm a front end developer...
 

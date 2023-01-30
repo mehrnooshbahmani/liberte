@@ -1,6 +1,6 @@
 {
   "name": "liberte",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "private": false,
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
@@ -16,9 +16,15 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "liberte start": "webpack-dev-server",
+    "start": "webpack-dev-server",
     "liberte build": "webpack -w",
     "liberte-config": "node lib/liberte_config.ts"
+  },
+  "bin": {
+    "liberte start": "npm run start",
+    "liberte build": "webpack -w",
+    "liberte-config": "node lib/liberte_config.ts"
+
   },
   "eslintConfig": {
     "extends": [
