@@ -1,0 +1,31 @@
+{
+  "name": "@liberte/config",
+  "version": "1.0.3",
+  "description": "liberte cli",
+  "main": "bin/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "bin": {
+    "liberte-config": "bin/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mehrnooshbahmani/liberte.git"
+  },
+  "keywords": [
+    "react",
+    "cli",
+    "webpack",
+    "liberte"
+  ],
+  "author": "Mehrnoosh Bahmani",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mehrnooshbahmani/liberte/issues"
+  },
+  "homepage": "https://github.com/mehrnooshbahmani/liberte#readme",
+  "devDependencies": {
+    "shelljs": "^0.8.5"
+  }
+}

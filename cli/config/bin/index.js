@@ -1,4 +1,8 @@
-const path =require('path');
+#! /usr/bin/env node
+const shell = require("shelljs");
+const fs = require('fs');
+
+const liberte_content = `const path =require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const HTMLWebpackPluginConfig = new HtmlWebpackPlugin({
     template: __dirname + '/public/index.html',
@@ -24,12 +28,12 @@ module.exports={
     },
     module: {
         rules: [
-            { test: /\.js$/,
+            { test: /\\.js$/,
                 exclude: /(node_modules)/,
                 loader: 'babel-loader',
             },
             {
-                test: /\.tsx?$/,
+                test: /\\.tsx?$/,
                 exclude: /node_modules/,
                 loader: 'ts-loader',
                 options: {
@@ -38,7 +42,7 @@ module.exports={
                     },
                 },
             },
-            {test: /\.scss$/,
+            {test: /\\.scss$/,
                 exclude: /(node_modules)/,
                 use: [
                     {loader: 'style-loader'},
@@ -46,12 +50,24 @@ module.exports={
                 ],
             },
             {
-                test: /\.css$/,
+                test: /\\.css$/,
                 use: ['style-loader', 'css-loader']
             },
-            {    test: /\.(svg|png|jpeg|jpg|gif)$/,
+            {    test: /\\.(svg|png|jpeg|jpg|gif)$/,
                 loader: "file-loader",
             }
         ]
     }
-}
+}`
+
+
+    if (fs.existsSync('webpack.config.ts')){
+        const webpack_content=fs.readFileSync('webpack.config.ts',{ encoding: 'utf8' })
+        fs.truncateSync('webpack.config.ts',0);
+        fs.appendFileSync('webpack.config.ts',`${liberte_content}\n /* ${webpack_content} */`,{ encoding: 'utf8' })
+    }
+    else {
+        fs.writeFileSync( 'webpack.config.ts',`${liberte_content.ts}\n` ,{ encoding: 'utf8' } )
+    }
+
+    
