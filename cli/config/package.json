@@ -1,6 +1,6 @@
 {
   "name": "@liberte/config",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "liberte cli",
   "main": "bin/index.js",
   "scripts": {
@@ -25,7 +25,5 @@
     "url": "https://github.com/mehrnooshbahmani/liberte/issues"
   },
   "homepage": "https://github.com/mehrnooshbahmani/liberte#readme",
-  "devDependencies": {
-    "shelljs": "^0.8.5"
-  }
+  "devDependencies": {}
 }

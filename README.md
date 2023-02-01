@@ -1,12 +1,12 @@
 # Liberté
 
-Liberté is a react type script project built with CRA and runs with webpack dev server, so you can add your costum webpack config without "react-script eject".
+Liberté is a react type script project built with CRA and runs with webpack dev server, so you can add your custom webpack config without "react-script eject".
 
 I named this package Liberte to express my protest against the prevailing conditions in Iran.
 Long live "Woman Life Freedom"
 <div>
   <a href="https://craco.js.org">
-    <img src="https://s26.picofile.com/file/8459183784/liberte.png" width="۲۵۰0" height="250">
+    <img src="https://s26.picofile.com/file/8459183784/liberte.png" width="250" height="250">
   </a>
 <br>
 </div>
@@ -14,6 +14,10 @@ Long live "Woman Life Freedom"
 
 https://en.wikipedia.org/wiki/Mahsa_Amini_protests
 
+[![npm License](https://img.shields.io/badge/npm-6.14.16-purple.svg)](https://www.npmjs.com/)
+[![node License](https://img.shields.io/badge/node-14.19.0-yellow.svg)](https://nodejs.org/)
+[![webpack License](https://img.shields.io/badge/webpack-5.75.0-blue.svg)](https://webpack.js.org/)
+[![typscript License](https://img.shields.io/badge/typescript-4.9.4-green.svg)](https://webpack.js.org/)
 ## Installation
 
 1.Install the latest version of the package from npm as a dev dependency:
@@ -26,9 +30,9 @@ npm i -D liberte
 ```bash
 "scripts": {
 -  "start": "react-scripts start"
-+  "start": "liberte start"
++  "liberte-start": "liberte-start"
 -  "build": "react-scripts build"
-+  "build": "liberte build"
++  "liberte-build": "liberte-build"
 +  "liberte": "liberte-config"
 }
 ```
