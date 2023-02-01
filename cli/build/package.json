@@ -1,8 +1,11 @@
 {
   "name": "@liberte/build",
-  "version": "1.0.7",
+  "version": "1.0.9",
   "description": "liberte cli",
   "main": "bin/index.js",
+  "files": [
+    "node_modules"
+  ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -25,7 +28,5 @@
     "url": "https://github.com/mehrnooshbahmani/liberte/issues"
   },
   "homepage": "https://github.com/mehrnooshbahmani/liberte#readme",
-  "devDependencies": {
-    "shelljs": "^0.8.5"
-  }
+  "devDependencies": {}
 }

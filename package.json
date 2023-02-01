@@ -1,6 +1,6 @@
 {
   "name": "liberte",
-  "version": "1.0.0",
+  "version": "1.1.3",
   "private": false,
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
@@ -10,16 +10,42 @@
     "@types/node": "^16.18.11",
     "@types/react": "^18.0.27",
     "@types/react-dom": "^18.0.10",
-    "global": "^4.4.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-scripts": "5.0.1",
-    "web-vitals": "^2.1.4"
+    "typescript": "^4.9.4",
+    "web-vitals": "^2.1.4",
+    "@babel/cli": "^7.20.7",
+    "@babel/plugin-syntax-decorators": "^7.19.0",
+    "@babel/preset-env": "^7.20.2",
+    "@babel/preset-react": "^7.18.6",
+    "@babel/register": "^7.18.9",
+    "@liberte/build": "^1.0.9",
+    "@liberte/config": "^1.1.2",
+    "@liberte/start": "^1.1.1",
+    "babel-loader": "^9.1.2",
+    "babel-plugin-lodash": "^3.3.4",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-plugin-transform-decorators-legacy": "^1.3.5",
+    "css-loader": "^6.7.3",
+    "file-loader": "^6.2.0",
+    "html-webpack-plugin": "^5.5.0",
+    "shelljs": "^0.8.5",
+    "style-loader": "^3.3.1",
+    "ts-loader": "^9.4.2",
+    "webpack": "^5.75.0",
+    "webpack-cli": "^5.0.1",
+    "webpack-dev-server": "^4.11.1"
   },
   "scripts": {
-    "liberte-start": "liberte-start",
-    "liberte-build": "liberte-build",
+    "start": "liberte-start",
+    "build": "liberte-build",
     "liberte": "liberte-config"
+  },
+  "bin": {
+    "liberte-start": "cli/start/bin/index.js",
+    "liberte-build": "cli/build/bin/index.js",
+    "liberte-config": "cli/config/bin/index.js"
   },
   "eslintConfig": {
     "extends": [
@@ -39,30 +65,12 @@
       "last 1 safari version"
     ]
   },
-  "devDependencies": {
-    "@babel/plugin-syntax-decorators": "^7.19.0",
-    "@babel/preset-env": "^7.20.2",
-    "@babel/preset-react": "^7.18.6",
-    "@babel/register": "^7.18.9",
-    "@liberte/build": "^1.0.7",
-    "@liberte/config": "^1.0.4",
-    "@liberte/start": "^1.0.9",
-    "babel-loader": "^9.1.2",
-    "babel-plugin-transform-class-properties": "^6.24.1",
-    "babel-plugin-transform-decorators-legacy": "^1.3.5",
-    "css-loader": "^6.7.3",
-    "file-loader": "^6.2.0",
-    "html-webpack-plugin": "^5.5.0",
-    "shelljs": "^0.8.5",
-    "style-loader": "^3.3.1",
-    "ts-loader": "^9.4.2",
-    "typescript": "^4.9.4",
-    "webpack": "^5.75.0",
-    "webpack-cli": "^5.0.1",
-    "webpack-dev-server": "^4.11.1"
-  },
+  "bundledDependencies": true,
   "description": "Liberté is a react type script project has built with CRA and run with webpack dev server, so you can add your custom webpack config without \"react-script eject\".",
   "main": "index.tsx",
+  "files": [
+    "node_modules"
+  ],
   "directories": {
     "lib": "lib"
   },

@@ -60,14 +60,34 @@ module.exports={
     }
 }`
 
-
     if (fs.existsSync('webpack.config.ts')){
         const webpack_content=fs.readFileSync('webpack.config.ts',{ encoding: 'utf8' })
         fs.truncateSync('webpack.config.ts',0);
         fs.appendFileSync('webpack.config.ts',`${liberte_content}\n /* ${webpack_content} */`,{ encoding: 'utf8' })
     }
     else {
-        fs.writeFileSync( 'webpack.config.ts',`${liberte_content.ts}\n` ,{ encoding: 'utf8' } )
+        fs.writeFileSync( 'webpack.config.ts',`${liberte_content}\n` ,{ encoding: 'utf8' })
     }
-
     
+    const liberte_babel=`{
+  "presets": ["@babel/preset-env",["@babel/preset-react",  {"runtime": "automatic"}]],
+  "plugins": [
+    "syntax-decorators",
+    ["transform-decorators-legacy", {
+      "legacy": true
+    }],
+    ["transform-class-properties", {
+      "spec": true
+    }]
+  ]
+}`
+
+
+if (fs.existsSync('.babelrc')){
+    const app_babel=fs.readFileSync('.babelrc',{ encoding: 'utf8' })
+    fs.truncateSync('.babelrc',0);
+    fs.appendFileSync('.babelrc',`${liberte_babel}\n /* ${app_babel} */`,{ encoding: 'utf8' })
+}
+else {
+    fs.writeFileSync( '.babelrc',`${liberte_babel}\n` ,{ encoding: 'utf8' })
+}

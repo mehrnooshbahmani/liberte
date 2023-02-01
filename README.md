@@ -20,19 +20,19 @@ https://en.wikipedia.org/wiki/Mahsa_Amini_protests
 [![typscript License](https://img.shields.io/badge/typescript-4.9.4-green.svg)](https://webpack.js.org/)
 ## Installation
 
-1.Install the latest version of the package from npm as a dev dependency:
+1.Install the latest version of the package from npm:
 
 ```bash
-npm i -D liberte
+npm i liberte
 ```
 2.Update the existing calls to react-scripts in the scripts section of your package.json to use the liberte CLI:
 
 ```bash
 "scripts": {
 -  "start": "react-scripts start"
-+  "liberte-start": "liberte-start"
++  "start": "liberte-start"
 -  "build": "react-scripts build"
-+  "liberte-build": "liberte-build"
++  "build": "liberte-build"
 +  "liberte": "liberte-config"
 }
 ```
@@ -44,11 +44,12 @@ npm i -D liberte
     "outDir": "./dist/",
     ...}
 ```
-4.run this command in terminal
+
+5.Run this command in terminal
 ```bash
    npm run liberte
 ```
-5.if you have webpack config from before, liberte keep your config as a comment, so you can uncomment yours and add them again
+6.If you have babelrc and webpack config from before, liberte keep your config as a comment, so you can uncomment yours and add them again
 ## 🚀 About Me
 I'm a front end developer...
 
